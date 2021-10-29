@@ -1,0 +1,40 @@
+---
+layout: black
+---
+
+<article class="lg:w-3/4 max-w-screen-sm">
+  <nav class="font-thin text-sm">
+    <a href="{{site.url}}" class="hover:text-black">Início</a>
+    <span class="mx-1">/</span>
+    <a href="{{site.url}}/blog" class="hover:text-black">Blog</a>
+    <span class="mx-1">/</span> 
+    <span class="text-gray-400">{{ page.title }}</span>
+  </nav>
+  <header class="text-2xl mb-6">
+    <h1 class="font-regular text-blue-300 font-bold uppercase mt-4">{{ page.title | escape }}</h1>
+  </header>
+  {% if page.image %}
+    <img src="{{ site.url }}{{ page.image }}" alt="{{ page.title }}" class="w-full lg:max-h-72 mb-4" />
+  {% endif %}
+  {{ content | newline_to_br }}
+</article>
+<aside class="float-right lg:-mt-3 lg:w-1/4">
+  <header class="h-8 lg:mt-12 flex items-end">
+    <h4 class="font-bold text-black">Outras postagens</h4>
+  </header>
+  <ul class="mt-6">
+    {% for post in site.posts limit:4 %}
+      {% if post.title != page.title %}
+        <li class="mb-8 catbox">
+          <a href="{{ post.url | relative_url }}" class="flex flex-col align-center justify-between">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="w-full" />
+            <div class="flex flex-col justify-between gap-4 py-4 h-32 px-4">
+              <h6 class="w-60 text-sm pr-4 line-clamp-3">{{ post.title }}</h6>
+              <h7 class="font-thin opacity-40 text-black">{{ post.date | date: "%d/%m/%y"}}</h7>
+            </div>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</aside>

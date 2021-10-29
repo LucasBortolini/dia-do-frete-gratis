@@ -1,0 +1,31 @@
+<section id="blog" class="bg-blue-300">
+  <div class="container mx-auto px-8 lg:px-24 py-8 lg:py-20">
+    <div>
+      <div class="flex justify-between align-end mb-4">
+        <h2 class="uppercase font-bold text-white text-2xl text-md md:text-xl lg:text-4xl">
+          {% if page.layout == 'post' %}
+            Destaques
+          {% else %}
+            Blog <span class="text-blue-100">Dia do Frete Grátis</span>
+          {% endif %}
+        </h2>
+        {% unless page.layout == 'post' %}
+          <a href="{{ '/blog' | relative_url }}" class="absolute lg:relative right-8 lg:right-0 -mb-6 lg:mb-0 uppercase text-black self-end text-sm">Ver todos os posts</a>
+        {% endunless %}
+      </div>
+      <hr class="border-b-2 border-white w-28 mb-16" />
+    </div>
+    <ul class="inline-flex flex-wrap w-full justify-center lg:justify-between gap-8 lg:gap-4 mb-8">
+      {% for post in site.posts limit:4 %}
+        <li>
+          <a href="{{ post.url | relative_url }}" class="flex flex-col align-center justify-between bg-yellow-200 lg:bg-transparent hover:bg-yellow-200">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="w-60" />
+            <div class="p-4 lg:h-24 w-60">
+              <h6 class="uppercase text-white text-center text-sm line-clamp-3">{{ post.title }}</h6>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<footer class="bg-gray-600 text-gray-500">
+  <div class="container flex-wrap mx-auto flex flex-col items-center justify-center lg:justify-between py-8 px-8 lg:px-24 lg:pt-14 lg:pb-20">
+    <ul class="lg:inline-flex list-none divide-x w-auto divide-gray-400 mx-auto px-10">
+      {% for page in site.footer.pages %}
+        <li class="px-8 py-2 lg:py-0 hover:text-blue-100">
+          <a href="{{ page.href | relative_url }}">{{ page.cta }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <ul class="w-full inline-flex flex-col lg:flex-row lg:justify-between mt-8 lg:mt-12 gap-8 px-10 lg:px-0">
+      {% for image in site.footer.images %}
+        <li>
+          <a href="{{ image.href }}" target="_blank">
+            <img src="{{ image.src | relative_url }}" alt="{{ image.alt }}" class="max-h-14" />
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="mt-8 lg:mt-12 text-xs">
+      <p>{{ site.footer.text }}</p>
+    </div>
+  </div>
+</footer>

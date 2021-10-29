@@ -1,0 +1,27 @@
+---
+layout: black
+---
+
+<article class="lg:w-3/4 max-w-screen-sm">
+  <nav class="font-thin text-sm">
+    <a href="{{site.url}}" class="text-sm">Início</a><span class="mx-1">/</span> 
+    <span class="text-gray-400">{{ page.title }}</span>
+  </nav>
+  <header class="text-2xl mb-6">
+    <h1 class="font-regular mt-12">{{ page.title | escape }}</h1>
+  </header>
+  {{ content | newline_to_br }}
+</article>
+<aside class="float-right lg:mt-16 lg:w-1/4">
+  <a href="https://www.blackfriday.com.br/assets/docs/Midia-Kit-BlackFriday-2019.pdf" target="_blank">
+    <button class="bg-yellow-200 border border-transparent hover:opacity-80 w-64 text-white rounded-2xl py-2">Veja aqui nosso mídia kit</button>
+  </a>
+  <hr class="border-b-2 border-yellow-200 w-24 mt-12"/>
+  <ul class="list-none mx-auto">
+    {% for category in site.site_categories %}
+    <li class="hover:text-gray-400">
+      <a href="#">{{ category }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</aside>
