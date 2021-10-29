@@ -1,0 +1,114 @@
+title: Dia do Frete Grátis 2021
+tagline: Dia do Frete Grátis 2021
+description: Dia do Frete Grátis 2021 - O primeiro e original do Brasil. As melhores promoções e ofertas de produtos das grandes marcas, em um único lugar.
+baseurl: /
+url: https://www.diadofretegrátis.com.br
+logo: assets/images/logo.svg
+banner-top: assets/images/BannerEsquentaTop.png
+banner-bt: assets/images/BannerEsquentaBottom.png
+lang: pt-br
+google_site_verification: -w3epTc9luAVsf7e1UsZjQKZkpyFFfQHircR4qXkJ8U
+google_analytics: G-RHKV7VL399
+
+author: 
+  - name: Leticia Sales
+    url: http://github.com/leticiasales
+  - name: Lucas Sales
+    url: http://github.com/LucasBortolini
+
+header:
+  pages:
+    - cta: Cadastre-se
+      href: "#cadastro"
+    - cta: Blog
+      href: /blog
+    - cta: Anuncie
+      href: /anuncie
+
+footer:
+  pages:
+    - cta: Termos de Uso
+      href: /assets/termos-de-uso.pdf
+    - cta: Política de Privacidade
+      href: /politica-de-privacidade
+    - cta: Perguntas Frequentes
+      href: /perguntas-frequentes
+    - cta: Sala de Imprensa
+      href: /sala-de-imprensa
+    - cta: Anuncie
+      href: /anuncie
+  images:
+    - src: assets/images/BuscaDescontos.png
+      href: https://www.buscadescontos.com.br
+      alt: Busca Descontos
+    - src: assets/images/BlackFriday.png
+      href: "#"
+      alt: Black Friday 2021
+    - src: assets/images/DiadoFreteGratis.png
+      href: https://www.diadofretegratis.com.br/
+      alt: Black Friday Discount 2021
+    - src: assets/images/CyberMonday.png
+      href: http://www.cybermondaybrasil.com.br/
+      alt: Cyber Monday Brasil 2021
+    - src: assets/images/BrasilGameDay.png
+      href: http://www.brasilgameday.com.br/
+      alt: Brasil Game Day
+  text: O Busca Descontos não vende produtos, é um site gratuito para os internautas. Como um agregador de ofertas não podemos garantir o preço e a disponibilidade das ofertas. As imagens são meramente ilustrativas. Caso haja diferença de preço ou descrição do produto entre o site do Busca Descontos e o site da loja, a condição válida e praticada será a do site do lojista. Sempre confira o preço e as condições diretamente no site da loja. Veja também as regras de entrega gratuita, parcelamento e política de vendas no site do lojista. Asofertas, condições de venda e preços dos varejistas podem ser alteradas ou interrompidas a qualquer momento, sem aviso prévio. Confira sempre o preço na página do produto da loja direcionada antes de efetuar a compra. A entrega do pedido é condicionada a disponibilidade do estoque do lojista e não está sob o controle dasoperações do buscadescontos.com.br.
+
+site_categories:
+  - Alimentos e bebidas
+  - Automotivo
+  - Beleza e saúde
+  - Brinquedos
+  - Casa e Decoração
+  - Criança e Bebê
+  - Cultura
+  - Eletrodomésticos
+  - Eletrônicos
+  - Esportes e Lazer
+  - Financeiro
+  - Fotografia
+  - Games
+  - Informática
+  - Moda
+  - Pets
+  - Serviços
+  - Smartphones
+  - Televisões
+  - Viagens
+
+collections:
+  pages:
+    output: true
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-postcss
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-coffeescript
+
+postcss:
+  cache: false
+  
+sass:  
+  style: compressed
+  load_paths:
+    - _sass
+    - node_modules
+
+exclude:
+  - .jekyll-cache/
+  - node_modules/
+  - Gemfile
+  - Gemfile.lock
+  - postcss.config.js
+  - tailwind.config.js
+  - package.json
+  - package-lock.json
+
+keep_files: [assets/images]
+
+include: ["node_modules/tailwindcss"]
